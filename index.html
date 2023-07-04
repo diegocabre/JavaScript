@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="contenedor__general">
+        <aside>
+            <div class="contenedor__aside">
+                <div class="cabecera__aside">
+                    <img src="./assets/img/Notebook-removebg-preview.png" alt="Notebook">
+                    <h1>Laptop Gamer Ryzen 7</h1>
+                </div>
+                <div class="contenido__aside">
+                    <input id="text1" placeholder="Cantidad" min="0" type="number">
+                    <input id="text2" placeholder="Color" type="color">
+                    <h1>Precio: $1.000.000</h1>
+                    <button onclick="
+                    elemento1 = document.querySelector('.contenido__aside #text1').value;
+                    elemento2 = document.querySelector('.contenido__aside #text2').value;
+                    total = document.querySelector('h1 #total');
+                    total.innerHTML = Number(elemento1)*1000000;
+                    cantidad = document.querySelector('h1 #cantidad');
+                    cantidad.innerHTML = elemento1;
+                    circulo = document.querySelector('h1 #circulo');
+                    circulo.style.backgroundColor = elemento2;
+                    ">
+                        Calcular Total
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <div class="contenedor__main">
+                <h1>Total: <span id="total">________</span></h1>
+                <h1>Cantidad:<span id="cantidad" >__________</span></h1>
+                <h1 id="color">Color:
+                        <div id="circulo">
+
+                        </div>
+                </h1>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
