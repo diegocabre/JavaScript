@@ -19,14 +19,16 @@
                     <input id="text2" placeholder="Color" type="color">
                     <h1>Precio: $1.000.000</h1>
                     <button onclick="
-                    elemento1 = document.querySelector('.contenido__aside #text1').value;
-                    elemento2 = document.querySelector('.contenido__aside #text2').value;
-                    total = document.querySelector('h1 #total');
-                    total.innerHTML = Number(elemento1)*1000000;
-                    cantidad = document.querySelector('h1 #cantidad');
-                    cantidad.innerHTML = elemento1;
-                    circulo = document.querySelector('h1 #circulo');
-                    circulo.style.backgroundColor = elemento2;
+                    const precio = 1000000;
+                    const cantidadentrada = document.querySelector('#text1').value;
+                    const colorentrada = document.querySelector('#text2').value;
+                    const preciofinal = document.querySelector('#total');
+                    const cantidadfinal = document.querySelector('#cantidad');
+                    const colorfinal = document.querySelector('#circulo');
+                    const preciofinalcalculado = precio*cantidadentrada;
+                    preciofinal.innerHTML = preciofinalcalculado.toLocaleString();
+                    cantidadfinal.innerHTML = cantidadentrada;
+                    colorfinal.style.backgroundColor = colorentrada;
                     ">
                         Calcular Total
                     </button>
@@ -35,7 +37,7 @@
         </aside>
         <main>
             <div class="contenedor__main">
-                <h1>Total: <span id="total">________</span></h1>
+                <h1>Total: $<span id="total">________</span></h1>
                 <h1>Cantidad:<span id="cantidad" >__________</span></h1>
                 <h1 id="color">Color:
                         <div id="circulo">
